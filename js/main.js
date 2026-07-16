@@ -21,23 +21,23 @@
 
 const WEDDING_CONFIG = {
   coupleInitials: 'N & L',
-  weddingDateISO: '2026-12-12T10:00:00',
+  weddingDateISO: '2026-09-04T09:45:00',  // countdown target: ceremony day
 
   events: {
     ceremony: {
       title: 'Wedding Ceremony — Navin & Lekshmy',
-      venue: 'The Grand Palace Hall',
-      address: '12 Cathedral Avenue, Kochi, Kerala, India',
-      start: '2026-12-12T10:00:00',
+      venue: 'Girideepam Convention Center',
+      address: 'Nalanchira, Thiruvananthapuram, Kerala, India',
+      start: '2026-12-12T09:45:00',
       end:   '2026-12-12T12:00:00',
       description: 'Wedding ceremony of Navin & Lekshmy.'
     },
     reception: {
       title: 'Wedding Reception — Navin & Lekshmy',
-      venue: 'The Royal Garden Pavilion',
-      address: '45 Marine Drive, Kochi, Kerala, India',
-      start: '2026-12-12T19:00:00',
-      end:   '2026-12-12T23:00:00',
+      venue: 'Izyan Sport City & Convention Center',
+      address: 'Puthemkulam, Paravur, Kollam, Kerala',
+      start: '2026-12-12T16:30:00',
+      end:   '2026-12-12T20:00:00',
       description: 'Wedding reception of Navin & Lekshmy.'
     }
   },
@@ -119,55 +119,13 @@ const Particles = (() => {
    2. INTRO SPLASH — Progress bar
    ========================================================================== */
 
+/* IntroSplash removed — navigation shows immediately */
 const IntroSplash = (() => {
-  const DURATION_MS = 2800; // total splash duration
-
   function init() {
-    const splash   = document.getElementById('intro-splash');
-    const progress = document.getElementById('splash-progress');
-    const canvas   = document.getElementById('particle-canvas');
-
-    if (!splash) return;
-
-    // Skip intro if already seen this session
-    if (sessionStorage.getItem('splashSeen') === 'true') {
-      splash.classList.add('is-hidden');
-      document.body.classList.remove('splash-open');
-      BottomNav.show();
-      return;
-    }
-
-    document.body.classList.add('splash-open');
-    if (canvas) Particles.init(canvas, 80);
-
-    // Animate the progress bar
-    const startTime = performance.now();
-
-    function step(now) {
-      const elapsed = now - startTime;
-      const pct     = Math.min(100, (elapsed / DURATION_MS) * 100);
-      if (progress) progress.style.width = pct + '%';
-
-      if (pct < 100) {
-        requestAnimationFrame(step);
-      } else {
-        // Slight pause at 100% before hiding
-        window.setTimeout(done, 300);
-      }
-    }
-
-    requestAnimationFrame(step);
-
-    function done() {
-      splash.classList.add('is-hidden');
-      document.body.classList.remove('splash-open');
-      Particles.stop();
-      sessionStorage.setItem('splashSeen', 'true');
-      BottomNav.show();
-      MusicToggle.autoStart();
-    }
+    // Splash removed; show nav and start music immediately
+    BottomNav.show();
+    MusicToggle.autoStart();
   }
-
   return { init };
 })();
 
@@ -393,9 +351,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Init gold particles on hero background
+  const heroCanvas = document.getElementById('particle-canvas');
+  if (heroCanvas) Particles.init(heroCanvas, 80);
+
   BottomNav.init();
   Countdown.init();
   EventLinks.init();
   MusicToggle.init();
-  IntroSplash.init(); // last — activates nav after splash
+  IntroSplash.init(); // shows nav immediately (no splash)
 });
