@@ -560,14 +560,13 @@ h1, h2, h3, h4 {
   animation: crest-breathe 5s ease-in-out infinite;
 }
 
-/* If using PNG fallback: mix-blend-mode:screen removes white on dark bg */
-.hero-ganesha-png {
-  mix-blend-mode: screen;
+/* Ganesha PNG (transparent background version) */
+.hero-ganesha {
   width: clamp(80px, 18vw, 120px);
   height: auto;
   display: block;
   margin: 0 auto 0.4rem;
-  filter: drop-shadow(0 0 14px rgba(212,175,55,0.5));
+  filter: drop-shadow(0 0 16px rgba(212,175,55,0.55));
   animation: crest-breathe 5s ease-in-out infinite;
 }
 
