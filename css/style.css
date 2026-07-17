@@ -561,7 +561,8 @@ h4 {
   text-align: center;
   /* top pad = bottom nav height so content isn't under nav bar */
   padding: clamp(1rem, 3vh, 2.5rem) 1.4rem clamp(4rem, 10vh, 6rem);
-  background: var(--gradient-navy);
+  /* background: var(--gradient-navy); */
+  background: var(--navy-light);
   overflow: hidden;
 }
 
@@ -623,9 +624,10 @@ h4 {
 /* Sanskrit row: श्री + Ganesha + श्री */
 .hero-sanskrit-row {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: clamp(0.6rem, 2vw, 1.4rem);
+  /* gap: clamp(0.6rem, 2vw, 1.4rem); */
   flex-shrink: 0;
 }
 
@@ -1433,4 +1435,115 @@ h4 {
     transform: none !important;
     transition: none !important;
   }
+}
+
+
+/* ==========================================================================
+   14. GALLERY + LIGHTBOX
+   ========================================================================== */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.1rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid var(--line-hairline);
+  background: linear-gradient(160deg, var(--navy-light), var(--dark-navy));
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 1.1s var(--ease-royal), filter 1.1s var(--ease-royal);
+  filter: saturate(0.92) brightness(0.92);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+  filter: saturate(1) brightness(1);
+}
+
+.gallery-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(212, 175, 55, 0.4);
+  pointer-events: none;
+  /* purely decorative — let clicks reach the <img> beneath */
+}
+
+.gallery-placeholder svg {
+  width: 30%;
+  height: 30%;
+}
+
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  pointer-events: none;
+}
+
+.gallery-item:hover::after {
+  border-color: var(--gold);
+  box-shadow: inset 0 0 0 4px rgba(8, 27, 58, 0.4);
+}
+
+#lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 6, 14, 0.94);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s var(--ease-royal), visibility 0.5s var(--ease-royal);
+}
+
+#lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+#lightbox img {
+  max-width: min(90vw, 900px);
+  max-height: 82vh;
+  border: 1px solid var(--line-hairline);
+  outline: 8px solid rgba(212, 175, 55, 0.08);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.8rem;
+  right: 2rem;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.lightbox-close:hover {
+  background: var(--gold);
+  color: var(--dark-navy);
 }
