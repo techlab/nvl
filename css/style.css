@@ -204,9 +204,16 @@ h4 {
   align-items: center;
   justify-content: center;
   gap: 0.9rem;
-  margin: 0.6rem auto 1.6rem;
+
+  
   width: min(300px, 80%);
+ margin-top: 0.6rem;
+
+   margin-left : auto;
+   margin-right:1.6rem;
 }
+
+
 
 .ornament-line {
   flex: 1;
@@ -234,7 +241,7 @@ h4 {
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   font-weight: 500;
   color: var(--champagne-gold);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0rem;
   letter-spacing: 0.02em;
 }
 
@@ -592,7 +599,7 @@ h4 {
 .hero-couple-fade {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(5, 18, 36, 0.2) 0%, #051224 85%);
+  background: radial-gradient(circle at 50% 50%, rgba(5, 18, 36, 0.2) 0%, #051224 75%);
 }
 
 /* Particle canvas inside hero */
@@ -629,6 +636,7 @@ h4 {
   justify-content: center;
   /* gap: clamp(0.6rem, 2vw, 1.4rem); */
   flex-shrink: 0;
+  margin-top: -40px;
 }
 
 .hero-sanskrit {
@@ -712,6 +720,7 @@ h4 {
 
 .hero-ornament {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 0.8rem;
   width: min(200px, 60%);
@@ -762,6 +771,8 @@ h4 {
   background: linear-gradient(180deg, var(--gold), transparent);
   overflow: hidden;
   position: relative;
+  margin-left: -3px;
+  margin-bottom: -5px;
 }
 
 .scroll-cue .stem::after {
@@ -797,13 +808,17 @@ h4 {
   background: var(--gradient-velvet);
 }
 
+.section-bg-1 {
+  background: linear-gradient(180deg, #07152e 0%, #0a1e40 55%, #07152e 100%);
+}
+
 /* Section 2 (invitation) — deep midnight blue */
 #invitation {
   background: linear-gradient(180deg, #07152e 0%, #0a1e40 55%, #07152e 100%);
 }
 
 /* Section 3 (events) — rich dark maroon-navy */
-#events {
+#events-old {
   background: linear-gradient(180deg, #0e0d22 0%, #160c2a 50%, #0e0d22 100%);
 }
 
@@ -955,8 +970,10 @@ h4 {
 
 .event-card {
   background: var(--navy-card);
-  border: 1px solid var(--line-hairline);
+ /* border: 1px solid var(--line-hairline);
   border-radius: 18px;
+  
+  */
   padding: 2.2rem 1.8rem;
   text-align: center;
   backdrop-filter: blur(6px);
@@ -1029,12 +1046,12 @@ h4 {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.5rem 1.2rem;
+  padding: 0.3rem .8rem;
   background: transparent;
   border: 1px solid rgba(212, 175, 55, 0.4);
   border-radius: 50px;
   font-family: var(--font-display);
-  font-size: 0.85rem;
+  font-size: 0.65rem;
   color: var(--champagne-gold);
   cursor: pointer;
   transition: all 0.3s var(--ease-royal);
@@ -1194,9 +1211,7 @@ h4 {
 
 /* Compliments */
 .compliments-wrap {
-  margin-top: 2.8rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--line-hairline);
+  margin-top: 1.8rem;
   text-align: center;
 }
 
@@ -1216,7 +1231,8 @@ h4 {
   border-radius: 50px;
   font-family: var(--font-display);
   font-size: 0.9rem;
-  color: var(--ivory-dim);
+  
+  color: var(--champagne-gold);
   background: rgba(212, 175, 55, 0.05);
   transition: all 0.3s ease;
 }

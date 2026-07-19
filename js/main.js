@@ -25,19 +25,25 @@ const WEDDING_CONFIG = {
 
   events: {
     ceremony: {
-      title: 'Wedding Ceremony — Navin & Lekshmy',
+      title: 'Navin & Lekshmy Wedding',
       venue: 'Girideepam Convention Center',
       address: 'Nalanchira, Thiruvananthapuram, Kerala, India',
-      start: '2026-12-12T09:45:00',
-      end:   '2026-12-12T12:00:00',
-      description: 'Wedding ceremony of Navin & Lekshmy.'
+      locationUrl: 'https://maps.app.goo.gl/6k4VWxE4oeGCCgMp9', 
+      longitude:'8.5515500', 
+      latitude:'76.9387328', 
+      start: '2026-09-04T09:45:00',
+      end:   '2026-09-04T10:30:00',
+      description: 'Wedding ceremony of Navin & Lekshmy'
     },
     reception: {
-      title: 'Wedding Reception — Navin & Lekshmy',
+      title: 'Navin & Lekshmy Wedding Reception',
       venue: 'Izyan Sport City & Convention Center',
       address: 'Puthemkulam, Paravur, Kollam, Kerala',
-      start: '2026-12-12T16:30:00',
-      end:   '2026-12-12T20:00:00',
+      locationUrl: 'https://maps.app.goo.gl/cSRCpFDXkoeF1FBu6', 
+      longitude:'8.8112101', 
+      latitude:'76.7159773', 
+      start: '2026-09-06T16:30:00',
+      end:   '2026-09-06T20:00:00',
       description: 'Wedding reception of Navin & Lekshmy.'
     }
   },
@@ -136,7 +142,7 @@ const IntroSplash = (() => {
 
 const BottomNav = (() => {
   let nav, items;
-  const SECTIONS = ['home', 'invitation', 'events', 'families'];
+  const SECTIONS = ['home', 'events', 'families', 'gallery'];
 
   function show() {
     if (nav) nav.classList.add('is-visible');
@@ -249,6 +255,7 @@ const EventLinks = (() => {
       `DTSTART:${toICSDate(evt.start)}`,
       `DTEND:${toICSDate(evt.end)}`,
       `LOCATION:${evt.address}`,
+      `GEO:${evt.latitude};${evt.longitude}`, 
       `DESCRIPTION:${evt.description}`,
       'END:VEVENT', 'END:VCALENDAR'
     ].join('\r\n');
@@ -273,13 +280,14 @@ const EventLinks = (() => {
       });
     });
 
+
     document.querySelectorAll('[data-map]').forEach(btn => {
       btn.addEventListener('click', () => {
         const key = btn.getAttribute('data-map');
         const evt = WEDDING_CONFIG.events[key];
         if (evt) {
           window.open(
-            `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(evt.address)}`,
+            evt.locationUrl,
             '_blank', 'noopener'
           );
         }
