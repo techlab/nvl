@@ -823,7 +823,11 @@ h4 {
 }
 
 /* Section 4 (families) — deep teal-navy */
-#families {
+#families2 {
+  background: linear-gradient(180deg, #071a2e 0%, #0b2335 50%, #071a2e 100%);
+}
+
+#gallery {
   background: linear-gradient(180deg, #071a2e 0%, #0b2335 50%, #071a2e 100%);
 }
 
