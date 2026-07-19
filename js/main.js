@@ -130,6 +130,7 @@ const IntroSplash = (() => {
   function init() {
     // Splash removed; show nav and start music immediately
     BottomNav.show();
+    
     MusicToggle.autoStart();
   }
   return { init };
