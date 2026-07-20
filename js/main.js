@@ -130,7 +130,6 @@ const IntroSplash = (() => {
   function init() {
     // Splash removed; show nav and start music immediately
     BottomNav.show();
-    
     MusicToggle.autoStart();
   }
   return { init };
@@ -312,10 +311,17 @@ const MusicToggle = (() => {
   }
 
   function autoStart() {
-    if (!audio || userMuted) return;
-    audio.volume = 0.35;
-    audio.play().then(() => updateUI(true)).catch(() => updateUI(false));
-  }
+  if (!audio || userMuted) return;
+  
+  audio.volume = 0.35;
+  
+  audio.play()
+    .then(() => updateUI(true))
+    .catch(err => {
+      console.log(err); // Check this!
+      updateUI(false);
+    });
+}
 
   function init() {
     btn = document.getElementById('music-toggle');
@@ -339,6 +345,8 @@ const MusicToggle = (() => {
         updateUI(false);
       }
     });
+    
+    
   }
 
   return { init, autoStart };
@@ -369,4 +377,6 @@ document.addEventListener('DOMContentLoaded', () => {
   EventLinks.init();
   MusicToggle.init();
   IntroSplash.init(); // shows nav immediately (no splash)
+  
+  
 });
