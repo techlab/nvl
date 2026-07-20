@@ -1,6 +1,6 @@
 /* ==========================================================================
    NAVIN & LEKSHMY — ROYAL WEDDING INVITATION
-   Stylesheet — Redesigned to match krishnalalpyary.com reference
+   Stylesheet
    --------------------------------------------------------------------------
    Table of contents:
      1.  Fonts & Reset
@@ -205,12 +205,12 @@ h4 {
   justify-content: center;
   gap: 0.9rem;
 
-  
-  width: min(300px, 80%);
- margin-top: 0.6rem;
 
-   margin-left : auto;
-   margin-right:1.6rem;
+  width: min(300px, 80%);
+  margin-top: 0.6rem;
+
+  margin-left: auto;
+  margin-right: 1.6rem;
 }
 
 
@@ -636,7 +636,6 @@ h4 {
   justify-content: center;
   /* gap: clamp(0.6rem, 2vw, 1.4rem); */
   flex-shrink: 0;
-  margin-top: -40px;
 }
 
 .hero-sanskrit {
@@ -745,12 +744,16 @@ h4 {
   justify-content: center;
 }
 
-
 /* Scroll cue */
+.gold-arrow {
+  color: var(--gold);
+  animation: shimmer 7s linear infinite;
+}
+
 .scroll-cue {
   position: absolute;
   left: 50%;
-  bottom: clamp(3rem, 4vw, 2.2rem);
+  bottom: clamp(2rem, 4vw, 2.2rem);
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
@@ -773,6 +776,7 @@ h4 {
   position: relative;
   margin-left: -3px;
   margin-bottom: -5px;
+  animation: cue-drop 2.4s var(--ease-royal) infinite;
 }
 
 .scroll-cue .stem::after {
@@ -811,6 +815,29 @@ h4 {
 .section-bg-1 {
   background: linear-gradient(180deg, #07152e 0%, #0a1e40 55%, #07152e 100%);
 }
+
+.section-line-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.8rem;
+  width: min(300px, 80%);
+  justify-self: center;
+  padding: .5rem;
+
+}
+
+.section-line-wrap .section-line {
+  flex: 1;
+  height: 1px;
+  width: min(200px, 60%);
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.section-line-wrap .section-icon {
+  color: var(--champagne-gold);
+}
+
 
 /* Section 2 (invitation) — deep midnight blue */
 #invitation {
@@ -901,7 +928,6 @@ h4 {
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--champagne-gold);
-  margin-bottom: 1.4rem;
 }
 
 /* Countdown */
@@ -931,6 +957,11 @@ h4 {
   flex-direction: column;
   align-items: center;
   min-width: clamp(60px, 15vw, 90px);
+  font-size: clamp(0.72rem, 1.8vh, 0.95rem);
+  color: var(--champagne-gold);
+  border: 1.5px solid rgba(212, 175, 55, 0.5);
+  border-radius: 5px;
+  letter-spacing: 0.06em;
 }
 
 .cd-value {
@@ -974,7 +1005,7 @@ h4 {
 
 .event-card {
   background: var(--navy-card);
- /* border: 1px solid var(--line-hairline);
+  /* border: 1px solid var(--line-hairline);
   border-radius: 18px;
   
   */
@@ -1193,9 +1224,15 @@ h4 {
 
 .family-parent {
   font-family: var(--font-display);
-  font-style: italic;
-  font-size: 0.85rem !important;
+  font-size: 1rem !important;
+  font-weight: bold;
   color: var(--ivory-dim) !important;
+}
+
+.family-parent em {
+  color: var(--ivory-dim) !important;
+  font-size: 0.8rem !important;
+  font-weight: normal;
 }
 
 .family-card-divider {
@@ -1235,7 +1272,7 @@ h4 {
   border-radius: 50px;
   font-family: var(--font-display);
   font-size: 0.9rem;
-  
+
   color: var(--champagne-gold);
   background: rgba(212, 175, 55, 0.05);
   transition: all 0.3s ease;
@@ -1466,6 +1503,7 @@ h4 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1.1rem;
+  margin-top: 1rem;
 }
 
 .gallery-item {

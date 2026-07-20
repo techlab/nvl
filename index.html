@@ -11,34 +11,29 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Navin &amp; Lekshmy | Wedding Invitation">
-  <meta property="og:description" content="Navin &amp; Lekshmy request the honour of your presence at their wedding celebration">
+  <meta property="og:description"
+    content="Navin &amp; Lekshmy request the honour of your presence at their wedding celebration">
   <meta property="og:type" content="website">
 
-<meta property="og:url"
-      content="https://navin-lekshmy.life">
+  <meta property="og:url" content="https://navinwedslekshmy.com">
 
-<meta property="og:image"
-      content="https://navin-lekshmy.life/assets/images/banner.png">
+  <meta property="og:image" content="https://navinwedslekshmy.com/assets/images/banner.png">
 
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
-<meta property="og:site_name"
-      content="Navin & Lekshmy Wedding Invitation">
+  <meta property="og:site_name" content="Navin & Lekshmy Wedding Invitation">
 
-<meta property="og:locale"
-      content="en_IN">
+  <meta property="og:locale" content="en_IN">
 
-<meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary_large_image">
 
-<meta name="twitter:title"
-      content="Navin & Lekshmy | Wedding Invitation">
+  <meta name="twitter:title" content="Navin & Lekshmy | Wedding Invitation">
 
-<meta name="twitter:description"
-      content="Navin &amp; Lekshmy request the honour of your presence at their wedding celebration">
+  <meta name="twitter:description"
+    content="Navin &amp; Lekshmy request the honour of your presence at their wedding celebration">
 
-<meta name="twitter:image"
-      content="https://navin-lekshmy.life/assets/images/banner.png">
+  <meta name="twitter:image" content="https://navinwedslekshmy.com/assets/images/banner.png">
 
   <link rel="icon"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23081B3A' stroke='%23D4AF37' stroke-width='4'/%3E%3Ctext x='50' y='64' font-family='Georgia' font-size='38' fill='%23D4AF37' text-anchor='middle'%3ENL%3C/text%3E%3C/svg%3E">
@@ -68,7 +63,7 @@
       <i class="fas fa-envelope-open bnav-icon"></i>
       <span class="bnav-label">Invitation</span>
     </a>
-    
+
     <a href="#events" class="bnav-item" data-section="events">
       <i class="fas fa-calendar-alt bnav-icon"></i>
       <span class="bnav-label">Events</span>
@@ -77,19 +72,19 @@
       <i class="fas fa-users bnav-icon"></i>
       <span class="bnav-label">Family</span>
     </a>
-    
+
     <a href="#gallery" class="bnav-item" data-section="gallery">
       <i class="fas fa-photo-film bnav-icon"></i>
       <span class="bnav-label">Gallery</span>
     </a>
-    
+
   </nav>
 
   <!-- ============================================================
      SECTION 1: HERO
      ============================================================ -->
   <section id="home" class="hero-section">
-    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <canvas id="particle-canvas"></canvas>
     <div class="star-field" aria-hidden="true"></div>
 
     <!-- Couple image — bottom decoration, blends into background -->
@@ -99,15 +94,13 @@
     </div>
 
     <div class="hero-inner" data-aos="fade-up" data-aos-duration="1200">
-      
+
       <div class="hero-ornament">
         <span class="ornament-line"></span>
-        
-         <span class="hero-sanskrit gold-text">श्री श्री</span>
+        <span class="hero-sanskrit gold-text">श्री श्री</span>
         <span class="ornament-line"></span>
-        
       </div>
-      
+
       <div class="hero-sanskrit-row">
         <img src="assets/images/ganesha_transparent.png" alt="Lord Ganesha — Auspicious Blessings"
           class="hero-ganesha" />
@@ -120,21 +113,40 @@
         <span class="hero-with super-font">with</span>
         Lekshmy
       </h1>
-      
-        <p class="hero-tagline">With immense joy and grateful hearts, we warmly invite you to witness and bless the beginning of our lifelong journey together</p> 
+
+      <p class="hero-tagline">With immense joy and grateful hearts, we warmly invite you to witness and bless the
+        beginning of our lifelong journey together</p>
 
       <div class="hero-date-pill card-blessing-attr" data-aos="fade-up" data-aos-delay="350">
-        <i class="fas fa-calendar-alt"></i>
         Friday, 4th September 2026
+      </div>
+
+      <!-- Countdown -->
+      <div class="countdown-wrap" data-aos="fade-up" data-aos-delay="420">
+        <div class="countdown-grid">
+          <div class="cd-unit">
+            <span class="cd-value gold-text" id="cd-days">00</span>
+            <span class="cd-unit-label">Days</span>
+          </div>
+          <div class="cd-unit">
+            <span class="cd-value gold-text" id="cd-hours">00</span>
+            <span class="cd-unit-label">Hours</span>
+          </div>
+          <div class="cd-unit">
+            <span class="cd-value gold-text" id="cd-mins">00</span>
+            <span class="cd-unit-label">Minutes</span>
+          </div>
+          <div class="cd-unit">
+            <span class="cd-value gold-text" id="cd-secs">00</span>
+            <span class="cd-unit-label">Seconds</span>
+          </div>
+        </div>
       </div>
 
     </div>
     <div class="scroll-cue" aria-hidden="true">
-      <span class="stem"></span>
-    
-       <i class="fa fa-angles-down gold-icon"></i>
+      <i class="fa-solid fa-2xl fa-angles-down fa-fade gold-arrow"></i>
     </div>
-
   </section>
 
 
@@ -145,18 +157,15 @@
     <div class="container">
 
       <h2 class="section-title text-center" data-aos="fade-up">Wedding Ceremony</h2>
-      
-      <div class="section-heading" data-aos="fade-up" data-aos-delay="80">
-        <span class="ornament-line"></span>
-        <i class="fas fa-gopuram gold-icon"></i>
-        <span class="ornament-line"></span>
+      <div class="section-line-wrap" data-aos="fade-up" data-aos-delay="80">
+        <span class="section-line"></span>
+        <i class="fas fa-gopuram section-icon"></i>
+        <span class="section-line"></span>
       </div>
 
       <div class="events-grid">
-
         <!-- Ceremony Card -->
         <div class="event-card" data-aos="fade-up" data-aos-delay="120">
-     
           <p class="event-card-date">Friday, 4th September 2026</p>
           <p class="event-card-time">Muhurtham: 09:45 AM — 10:30 AM</p>
           <p class="event-card-venue">Girideepam Convention Center</p>
@@ -169,97 +178,68 @@
               <i class="fas fa-map-location-dot"></i> View Location
             </button>
           </div>
-          
-           <!-- Countdown -->
-        <div class="countdown-wrap" data-aos="fade-up" data-aos-delay="420">
-          <p class="countdown-label-top">Counting Down</p>
-          <div class="countdown-grid">
-            <div class="cd-unit">
-              <span class="cd-value gold-text" id="cd-days">00</span>
-              <span class="cd-unit-label">Days</span>
-            </div>
-            <div class="cd-sep">:</div>
-            <div class="cd-unit">
-              <span class="cd-value gold-text" id="cd-hours">00</span>
-              <span class="cd-unit-label">Hours</span>
-            </div>
-            <div class="cd-sep">:</div>
-            <div class="cd-unit">
-              <span class="cd-value gold-text" id="cd-mins">00</span>
-              <span class="cd-unit-label">Minutes</span>
-            </div>
-            <div class="cd-sep">:</div>
-            <div class="cd-unit">
-              <span class="cd-value gold-text" id="cd-secs">00</span>
-              <span class="cd-unit-label">Seconds</span>
-            </div>
-          </div>
-        </div>
-        
-        
-           <!-- Order of the Day -->
-      <div class="schedule-wrap" data-aos="fade-up" data-aos-delay="80">
-        <h3 class="sub-section-title text-center">Order Of The Wedding Day</h3>
-        <div class="section-heading" data-aos="fade-up" data-aos-delay="100">
-          <span class="ornament-line"></span>
-          <i class="fas fa-clock gold-icon"></i>
-          <span class="ornament-line"></span>
-        </div>
 
-        <div class="schedule-list">
-          <div class="schedule-row" data-aos="fade-up">
-            <span class="schedule-time">9:00 AM</span>
-            <div class="schedule-connector"><span class="schedule-dot"></span><span class="schedule-line"></span></div>
-            <div class="schedule-event">
-              <h4>Groom's Reception</h4>
-              <p>Welcomes the groom and family.</p>
+
+          <!-- Order of the Day -->
+          <div class="schedule-wrap" data-aos="fade-up" data-aos-delay="80">
+            <h2 class="sub-section-title text-center" data-aos="fade-up">Order Of The Wedding Day</h2>
+            <div class="section-line-wrap" data-aos="fade-up" data-aos-delay="80">
+              <span class="section-line"></span>
+              <i class="fas fa-clock section-icon"></i>
+              <span class="section-line"></span>
+            </div>
+
+            <div class="schedule-list">
+              <div class="schedule-row" data-aos="fade-up">
+                <span class="schedule-time">9:00 AM</span>
+                <div class="schedule-connector"><span class="schedule-dot"></span><span class="schedule-line"></span>
+                </div>
+                <div class="schedule-event">
+                  <h4>Groom's Reception</h4>
+                  <p>Welcomes the groom and family.</p>
+                </div>
+              </div>
+              <div class="schedule-row" data-aos="fade-up" data-aos-delay="80">
+                <span class="schedule-time">09:45 AM</span>
+                <div class="schedule-connector"><span class="schedule-dot"></span><span class="schedule-line"></span>
+                </div>
+                <div class="schedule-event">
+                  <h4>Wedding Ceremony</h4>
+                  <p>The exchange of vows and thalikettu.</p>
+                </div>
+              </div>
+              <div class="schedule-row" data-aos="fade-up" data-aos-delay="140">
+                <span class="schedule-time">10:30 AM onwards</span>
+                <div class="schedule-connector"><span class="schedule-dot"></span><span class="schedule-line"></span>
+                </div>
+                <div class="schedule-event">
+                  <h4>Lunch &amp; Photographs</h4>
+                  <p>Portraits with the newlyweds and also starts the lunch.</p>
+                </div>
+              </div>
+              <div class="schedule-row" data-aos="fade-up" data-aos-delay="260">
+                <span class="schedule-time">03:00 PM</span>
+                <div class="schedule-connector"><span class="schedule-dot"></span></div>
+                <div class="schedule-event">
+                  <h4>Send-Off</h4>
+                  <p>A final toast beneath the stars as the celebration closes.</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="schedule-row" data-aos="fade-up" data-aos-delay="80">
-            <span class="schedule-time">09:45 AM</span>
-            <div class="schedule-connector"><span class="schedule-dot"></span><span class="schedule-line"></span></div>
-            <div class="schedule-event">
-              <h4>Wedding Ceremony</h4>
-              <p>The exchange of vows and thalikettu.</p>
-            </div>
-          </div>
-          <div class="schedule-row" data-aos="fade-up" data-aos-delay="140">
-            <span class="schedule-time">10:30 AM onwards</span>
-            <div class="schedule-connector"><span class="schedule-dot"></span><span class="schedule-line"></span></div>
-            <div class="schedule-event">
-              <h4>Lunch &amp; Photographs</h4>
-              <p>Portraits with the newlyweds and also starts the lunch.</p>
-            </div>
-          </div>
-          <div class="schedule-row" data-aos="fade-up" data-aos-delay="260">
-            <span class="schedule-time">03:00 PM</span>
-            <div class="schedule-connector"><span class="schedule-dot"></span></div>
-            <div class="schedule-event">
-              <h4>Send-Off</h4>
-              <p>A final toast beneath the stars as the celebration closes.</p>
-            </div>
-          </div>
+          <!-- end orfer if the day-->
         </div>
       </div>
-      <!-- end orfer if the day-->
-        
-        
-        </div>
 
-
-
-        <!-- Reception Card -->
-        
-      <h2 class="section-title text-center" data-aos="fade-up">Reception</h2>
-      
-      <div class="section-heading" data-aos="fade-up" data-aos-delay="80">
-        <span class="ornament-line"></span>
-        <i class="fas fa-champagne-glasses gold-icon"></i>
-        <span class="ornament-line"></span>
+      <!-- Reception Card -->
+      <h2 class="section-title text-center" data-aos="fade-up">Wedding Reception</h2>
+      <div class="section-line-wrap" data-aos="fade-up" data-aos-delay="80">
+        <span class="section-line"></span>
+        <i class="fas fa-champagne-glasses section-icon"></i>
+        <span class="section-line"></span>
       </div>
-        
+      <div class="events-grid">
         <div class="event-card" data-aos="fade-up" data-aos-delay="200">
-     
           <p class="event-card-date">Sunday, 6th September 2026</p>
           <p class="event-card-time">4:30 PM — 8:00 PM</p>
           <p class="event-card-venue">Izyan Sport City & Convention Center</p>
@@ -273,58 +253,50 @@
             </button>
           </div>
         </div>
-
       </div>
-
-   
 
     </div>
   </section>
-  
-    <!-- ============================================================
+
+  <!-- ============================================================
      SECTION 4: FAMILIES
      ============================================================ -->
   <section id="families" class="page-section">
     <div class="container">
 
       <h2 class="section-title text-center" data-aos="fade-up">Our Families</h2>
-      <div class="section-heading" data-aos="fade-up" data-aos-delay="80">
-        <span class="ornament-line"></span>
-        <i class="fas fa-users gold-icon"></i>
-        <span class="ornament-line"></span>
+      <div class="section-line-wrap" data-aos="fade-up" data-aos-delay="80">
+        <span class="section-line"></span>
+        <i class="fa-solid fa-people-roof section-icon"></i>
+        <span class="section-line"></span>
       </div>
 
       <div class="families-grid">
         <div class="family-card" data-aos="fade-up" data-aos-delay="120">
           <div class="family-card-header">
-            <i class="fas fa-house-chimney"></i>
-            <h3>Groom's Family</h3>
+            <h3>Navin's Family</h3>
           </div>
           <div class="family-names">
-            <p><strong>Navin</strong></p>
-            <p class="family-parent">S/O <em>Sanjeev Sadasivan & Sheejs G. S.</em></p>
+            <p class="family-parent"><em>Son of</em> Sanjeev Sadasivan & Sheejs G. S.</p>
+            <p class="family-parent"><em>(Sreejai, Kottappuram, Paravur, Kollam, Kerala)</em></p>
+            <p class="family-parent"><em>Grandson of</em> Late Adv. Kottiyam P. Sadasivan & Late Adv. M. P. Ammini Devi
+            </p>
+            <p class="family-parent"><em>Grandson of</em> Late K. P Ganesan & Smt. G. Sreerenjitham
+            </p>
           </div>
-        </div>
-
-        <div class="family-card-divider" data-aos="fade-up">
-          <span class="ornament-line"></span>
-          <i class="fas fa-heart gold-icon"></i>
-          <span class="ornament-line"></span>
         </div>
 
         <div class="family-card" data-aos="fade-up" data-aos-delay="200">
           <div class="family-card-header">
-            <i class="fas fa-house-chimney"></i>
-            <h3>Bride's Family</h3>
+            <h3>Lekshmy's Family</h3>
           </div>
           <div class="family-names">
-            <p><strong>Lekshmy</strong></p>
-            <p class="family-parent">D/O <em>L. Surya Narayanan & Suma T. D.</em></p>
+            <p class="family-parent"><em>Daughter of</em> L. Surya Narayanan & Suma T. D.</p>
+            <p class="family-parent"><em>(Sree Ragam, Station Road, Pravachambalam, Nemom, Thiruvananthapuram,
+                Kerala)</em></p>
           </div>
         </div>
       </div>
-
-     
 
     </div>
   </section>
@@ -335,47 +307,47 @@
        ========================================================== -->
   <section id="gallery" class="page-section">
     <div class="section-content container">
+
       <h2 class="section-title text-center" data-aos="fade-up">Gallery</h2>
-      <div class="section-heading" data-aos="fade-up" data-aos-delay="80">
-        <span class="ornament-line"></span>
-        <i class="fas fa-photo-film gold-icon"></i>
-        <span class="ornament-line"></span>
+      <div class="section-line-wrap" data-aos="fade-up" data-aos-delay="80">
+        <span class="section-line"></span>
+        <i class="fas fa-photo-film section-icon"></i>
+        <span class="section-line"></span>
       </div>
 
       <div class="gallery-grid">
-
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="120">
-          <img src="assets/images/22929.png" alt="Wedding photograph">
+          <img src="assets/images/22929.png" alt="Wedding">
           <div class="gallery-placeholder"><svg viewBox="0 0 64 64">
               <use href="#icon-frame"></use>
             </svg></div>
         </div>
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="160">
-          <img src="assets/images/22930.png" alt="Wedding photograph">
+          <img src="assets/images/22930.png" alt="Wedding">
           <div class="gallery-placeholder"><svg viewBox="0 0 64 64">
               <use href="#icon-frame"></use>
             </svg></div>
         </div>
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-          <img src="assets/images/22931.png" alt="Wedding photograph">
+          <img src="assets/images/22931.png" alt="Wedding">
           <div class="gallery-placeholder"><svg viewBox="0 0 64 64">
               <use href="#icon-frame"></use>
             </svg></div>
         </div>
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="260">
-          <img src="assets/images/22922.png" alt="Wedding photograph">
+          <img src="assets/images/22926.png" alt="Wedding">
           <div class="gallery-placeholder"><svg viewBox="0 0 64 64">
               <use href="#icon-frame"></use>
             </svg></div>
         </div>
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
-          <img src="assets/images/22926.png" alt="Wedding photograph">
+          <img src="assets/images/22922.png" alt="Wedding">
           <div class="gallery-placeholder"><svg viewBox="0 0 64 64">
               <use href="#icon-frame"></use>
             </svg></div>
         </div>
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="340">
-          <img src="assets/images/22928.png" alt="Wedding photograph">
+          <img src="assets/images/22928.png" alt="Wedding">
           <div class="gallery-placeholder"><svg viewBox="0 0 64 64">
               <use href="#icon-frame"></use>
             </svg></div>
@@ -397,7 +369,7 @@
     <div class="footer-inner">
       <p class="footer-names super-font gold-text">Navin &amp; Lekshmy</p>
 
-     
+
       <p class="footer-tagline">04 · 09 · 2026</p>
 
       <p class="footer-note">
@@ -405,14 +377,14 @@
         past, present, and the chapters yet to come.
       </p>
 
-     
-      
-       <!-- Best Compliments -->
-      <div class="compliments-wrap" data-aos="fade-up" data-aos-delay="100">
-        
-          <p class="footer-credit">With Best Compliments</p>
 
-       
+
+      <!-- Best Compliments -->
+      <div class="compliments-wrap" data-aos="fade-up" data-aos-delay="100">
+
+        <p class="footer-credit">With Best Compliments</p>
+
+
         <div class="compliment-pills" data-aos="fade-up" data-aos-delay="120">
           <span class="cpill">Ajith</span>
           <span class="cpill">Lakshmi</span>
@@ -422,7 +394,7 @@
           <span class="cpill">Munni</span>
         </div>
       </div>
-      
+
     </div>
   </footer>
 
